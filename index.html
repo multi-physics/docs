@@ -319,19 +319,35 @@
       </div>
     </div>
 
-    <!-- Scroll Animation -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const cards = document.querySelectorAll('#developer .glass');
+        const isMobile = window.innerWidth < 768;
+
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-              setTimeout(() => entry.target.classList.add('animate-in'), i * 200);
+              setTimeout(() => entry.target.classList.add('animate-in'), i * 150);
               observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.3 });
+        }, {
+          threshold: isMobile ? 0.1 : 0.3,  // 手机更敏感
+          rootMargin: '0px 0px -50px 0px'
+        });
+
         cards.forEach(card => observer.observe(card));
+
+        // 手机端保险：加载后 300ms 强制显示
+        if (isMobile) {
+          setTimeout(() => {
+            cards.forEach(card => {
+              if (!card.classList.contains('animate-in')) {
+                card.classList.add('animate-in');
+              }
+            });
+          }, 300);
+        }
       });
     </script>
   </section>
