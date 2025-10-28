@@ -20,7 +20,7 @@
 
   <!-- 微信分享缩略图（关键！） -->
   <meta property="og:title" content="Fidelics : Fidelity-Multiphysics">
-  <meta property="og:description" content="兑现产品承诺，释放创造力。国产多物理场仿真平台，赋能高端装备与新质生产力。">
+  <meta property="og:description" content="兑现产品承诺，释放创造力。\n 国产多物理场仿真平台，赋能高端装备与新质生产力。">
   <meta property="og:image" content="images/logos/111.png">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
@@ -51,6 +51,14 @@
 
     .dot-indicator.active {
       @apply w-8 bg-blue-500;
+    }
+
+    .title-font {
+      font-size: clamp(1.25rem, 6vw, 4.5rem);
+    }
+
+    .slogan-font {
+      font-size: clamp(1.0rem, 4vw, 2.5rem);
     }
 
     section {
@@ -138,9 +146,9 @@
     <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
     <div class="max-w-7xl mx-auto text-center relative z-10">
 
-      <!-- 主标题 -->
-      <h1 class="text-5xl md:text-7xl font-bold mb-8 md:mb-10 leading-tight text-center">
-        <span class="inline-block whitespace-nowrap">
+      <!-- 主标题：自适应字体  -->
+      <h1 class="font-bold mb-8 md:mb-10 leading-tight text-center">
+        <span class="inline-block whitespace-nowrap title-font">
           <span class="text-white font-black tracking-tight drop-shadow-lg">
             Fidelics
           </span>
@@ -151,7 +159,7 @@
         </span>
       </h1>
 
-      <!-- 中英文 slogan：紧凑版 -->
+      <!-- slogan：自适应字体 + 自动切换 -->
       <div x-data="{
            slogans: [
              '兑现产品承诺，释放创造力',
@@ -160,8 +168,7 @@
            index: 0
          }" x-init="setInterval(() => index = (index + 1) % slogans.length, 4000)"
         class="h-20 md:h-24 overflow-hidden">
-        <p class="text-2xl md:text-4xl font-light transition-all duration-1000 ease-in-out whitespace-nowrap leading-tight"
-          :class="index === 0 
+        <p class="transition-all duration-1000 ease-in-out whitespace-nowrap slogan-font" :class="index === 0 
            ? 'opacity-100 translate-y-0 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold tracking-wide'
            : 'opacity-100 translate-y-0 text-white drop-shadow-lg font-bold tracking-wider opacity-0 '"
           x-text="slogans[index]"></p>
@@ -181,8 +188,9 @@
   </section>
 
   <!-- Generalized CAE Products -->
-  <section id="products" class="py-32 px-6 bg-slate-900">
-    <div class="max-w-7xl mx-auto">
+  <section id="products" class="py-32 px-6 bg-gradient-to-b from-slate-950 to-slate-900/50 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
+    <div class="relative z-10 max-w-7xl mx-auto">
       <h2
         class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         核心通用产品</h2>
@@ -238,11 +246,16 @@
         </div>
       </div>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent">
+    </div>
   </section>
 
-  <!-- SDK & Developer Services - FINAL FIXED -->
-  <section id="developer" class="py-32 px-6 bg-gradient-to-b from-slate-950 to-slate-900 relative">
-    <div class="max-w-5xl mx-auto">
+  <!-- SDK & Developer Services -->
+  <section id="developer" class="py-32 px-6 bg-gradient-to-b from-slate-900/50 to-slate-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+
       <h2
         class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         开发者服务与 SDK
@@ -316,7 +329,13 @@
           class="inline-block px-8 py-3 border border-blue-500 text-blue-400 rounded-full hover:bg-blue-500 hover:text-white transition">
           查看 API 文档
         </a>
+
       </div>
+      <br>
+      <div
+        class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent">
+      </div>
+
     </div>
 
     <script>
@@ -353,15 +372,20 @@
   </section>
 
   <!-- Placeholder Sections -->
-  <section id="pro-scenes" class="py-32 px-6 bg-slate-900">
+  <section id="pro-scenes" class="py-32 px-6 bg-gradient-to-b from-slate-950 to-slate-900/50 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-5xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         专业场景产品</h2>
       <p class="text-gray-400 max-w-2xl mx-auto">即将推出：电池热失控、复合材料损伤、湍流大涡模拟等行业专属方案</p>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent">
+    </div>
+
   </section>
 
-  <section id="support" class="py-32 px-6">
+  <section id="support" class="py-32 px-6 bg-gradient-to-b from-slate-900/50 to-slate-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-5xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         支持与反馈</h2>
@@ -372,9 +396,13 @@
         <a href="#" class="text-blue-400 hover:underline">技术热线</a>
       </div>
     </div>
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent">
+    </div>
+
   </section>
 
-  <section id="about" class="py-32 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+  <section id="about" class="py-32 px-6 bg-gradient-to-b from-slate-950 to-slate-950 relative overflow-hidden">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
     <div class="max-w-7xl mx-auto text-center">
       <h2 class="text-5xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         关于我们</h2>
@@ -390,6 +418,8 @@
       <p>© 2025 Fidelics Technology. All rights reserved.</p>
       <p class="mt-2">引领多物理场仿真新时代</p>
     </div>
+    <br>
+    <br>
   </footer>
 
   <!-- Scroll Active Section Tracker -->
