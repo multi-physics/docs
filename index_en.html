@@ -223,7 +223,8 @@
       <!-- slogan：自适应字体 + 自动切换 -->
       <div x-data="{
            slogans: [
-             '专注创造力，实现产品承诺',
+             '兑现产品承诺，释放创造力',
+             'Fulfill the Promise. Unleash the Creation.'
            ],
            index: 0
          }" x-init="setInterval(() => index = (index + 1) % slogans.length, 4000)"
@@ -236,7 +237,7 @@
 
       <!-- 描述文字：减少间距 -->
       <p class="text-lg md:text-xl text-gray-400 mt-6 max-w-3xl mx-auto leading-relaxed">
-        高保真、富有洞察力、用户导向的现代多物理建模仿真平台
+        A high fidelity, insightful, user-oriented multiphysics modeling platform
       </p>
       <div class="mt-10">
         <a href="#products"
@@ -449,81 +450,17 @@
     </script>
   </section>
 
-  <!-- 专业场景产品 -->
+  <!-- Placeholder Sections -->
   <section id="pro-scenes" class="py-32 px-6 bg-gradient-to-b from-slate-950 to-slate-900/50 relative overflow-hidden">
-    <div class="max-w-6xl mx-auto">
-
-      <h2
-        class="text-center text-5xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+    <div class="absolute inset-0 bg-grid-white/5"></div>
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-5xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
         专业场景产品</h2>
-
-      <!-- 紧凑列表：2 列，极简卡片 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-
-        <!-- 场景 1 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-blue-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-blue-300 group-hover:text-blue-200">空天超跨音速气动分析</h3>
-            <p class="text-gray-400 mt-1">超/跨音速流动 · 激波捕捉 · 气动热结构耦合</p>
-          </div>
-        </div>
-
-        <!-- 场景 2 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-purple-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-purple-300 group-hover:text-purple-200">航空汽车声学预测</h3>
-            <p class="text-gray-400 mt-1">宽频噪声建模 · FW-H 声比拟 · 声源定位降噪</p>
-          </div>
-        </div>
-
-        <!-- 场景 3 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-emerald-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-emerald-300 group-hover:text-emerald-200">汽车风阻分析优化</h3>
-            <p class="text-gray-400 mt-1">高精度外流场 · 动网格变形 · 气动参数化优化</p>
-          </div>
-        </div>
-
-        <!-- 场景 4 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-orange-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-orange-500 to-red-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-orange-300 group-hover:text-orange-200">动力推进装置气动与燃烧</h3>
-            <p class="text-gray-400 mt-1">多参考系 · 多相流 · 多组分 · 化学反应</p>
-          </div>
-        </div>
-
-        <!-- 场景 5 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-cyan-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-cyan-500 to-blue-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-cyan-300 group-hover:text-cyan-200">高能量密度电机热分析</h3>
-            <p class="text-gray-400 mt-1">热-流耦合 · 高转速 · 多相流</p>
-          </div>
-        </div>
-
-        <!-- 场景 6 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
-                  hover:border-indigo-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-indigo-300 group-hover:text-indigo-200">船舶海洋推进与晃荡</h3>
-            <p class="text-gray-400 mt-1">六自由度动网格 · 自由液面 · 螺旋桨空化</p>
-          </div>
-        </div>
-
-      </div>
+      <p class="text-gray-400 max-w-2xl mx-auto">即将推出：电池热失控、复合材料损伤、湍流大涡模拟等行业专属方案</p>
     </div>
     <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent">
     </div>
+
   </section>
 
   <!-- 支持与反馈 -->
@@ -556,19 +493,17 @@
         <div
           class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-left hover:border-emerald-500 transition">
           <h3 class="text-xl font-semibold text-emerald-300 mb-2">专属技术支持</h3>
-          <p class="text-sm text-gray-400">快速响应 · 专属工程师 · SLA 保障</p>
+          <p class="text-sm text-gray-400">7×24 工单 · 专属工程师 · SLA 保障</p>
         </div>
 
         <!-- 定制化服务 -->
         <div
           class="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 text-left hover:border-orange-500 transition">
           <h3 class="text-xl font-semibold text-orange-300 mb-2">定制化服务</h3>
-          <p class="text-sm text-gray-400">方案培训 · 模型定制 · 联合研发</p>
+          <p class="text-sm text-gray-400">上门培训 · 模型定制 · 联合研发</p>
         </div>
 
       </div>
-    </div>
-    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent">
     </div>
   </section>
 
