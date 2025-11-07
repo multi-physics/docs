@@ -4,8 +4,8 @@ header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');   // 允许跨域（前端静态页）
 
 // ==================  配置 ==================
-$APP_ID     = 'wxc4e4eda8cd960999';  //后面为公众号
-$APP_SECRET ='24f62ac00b3e07fc7b13e857e2528f39';// 'eb1f7b9718443e71c7d55d8502a21e63'; //后面为公众号
+$APP_ID     = 'wx28d8dd199b32613d';  //Fidelics公众号
+$APP_SECRET = 'b1f1a2d186fa93fcf409c8212adf86fc'; //Fidelics公众号
 
 // ================== 缓存目录 ==================
 $cacheDir = __DIR__ . '/cache';

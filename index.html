@@ -7,8 +7,8 @@
   <title>Fidelics : Fidelity-Multiphysics</title>
 
   <!-- 核心图标 -->
-  <link rel="icon" href="images/logos/64x64.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="images/logos/111.png" type="image/x-icon">
+  <link rel="icon" href="https://fidelics.cn/images/logos/64x64.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://fidelics.cn/images/logos/64x64.ico" type="image/x-icon">
 
   <!-- 苹果设备 -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -21,76 +21,22 @@
   <!-- 微信分享缩略图（关键！） -->
   <meta property="og:title" content="Fidelics : Fidelity-Multiphysics">
   <meta property="og:description" content="Fidelics多物理场仿真平台，赋能高端装备与新质生产力。">
-  <meta property="og:image" content="images/logos/111.png">
+  <meta property="og:image" content="https://fidelics.cn/images/logos/64x64.ico">
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
   <meta property="og:type" content="website">
 
 
   <!-- Tailwind & Alpine -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="css/tailwind.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <script src="https://fidelics.cn/js/wechatShare.js"></script>
   <script>
 
-    // 没有后端，页面加载时获取签名
-    function initWx() {
-      // 当前URL（不含#）
-      var url = location.href.split('#')[0];
-      var script = document.createElement('script');
-      script.src = 'https://fidelics.cn/wechatSignature.php?url=' + encodeURIComponent(url) + '&callback=wxCallback'; // 你的后端API
-      document.head.appendChild(script);
-
-      // 回调函数
-      window.wxCallback = function (res) {
-        wx.config({
-          debug: false, // 生产环境false
-          appId: res.appId,
-          timestamp: res.timestamp,
-          nonceStr: res.nonceStr,
-          signature: res.signature,
-          jsApiList: ['updateAppMessageShareData', 'updateTimelineShareData'] // 需要使用的接口
-        });
-
-        wx.ready(function () {
-          // alert('JS-SDK初始化成功');
-          // // 分享到朋友（聊天）
-          // wx.updateAppMessageShareData({
-          //   title: 'Fidelics : Fidelity-Multiphysics',
-          //   desc: '兑现产品承诺，释放创造力。国产多物理场仿真平台，赋能高端装备与新质生产力。',
-          //   link: 'https://fidelics.cn/',
-          //   imgUrl: 'https://fidelics.cn/images/logos/111.png',
-          //   success: function () {
-          //     alert('感谢您的分享！');
-          //   },
-          //   cancel: function () {
-          //     alert('分享取消。');
-          //   }
-          // });
-
-          // // 分享到朋友圈
-          // wx.updateTimelineShareData({
-          //   title: 'Fidelics : Fidelity-Multiphysics - 国产多物理场仿真平台',
-          //   link: 'https://fidelics.cn/',
-          //   imgUrl: 'https://fidelics.cn/images/logos/111.png',
-          //   success: function () {
-          //     alert('感谢您的分享！');
-          //   },
-          //   cancel: function () {
-          //     alert('分享取消。');
-          //   }
-          // });
-        });
-
-        wx.error(function (err) {
-          // alert('JS-SDK初始化失败:' + err);
-        });
-      };
-    }
-
-    initWx();
+    initWx('Fidelics : Fidelity-Multiphysics - 国产多物理场仿真平台', '兑现产品承诺，释放创造力,赋能高端装备与新质生产力', 'https://fidelics.cn/images/logos/64x64.ico');
   </script>
 
 
@@ -134,7 +80,7 @@
   <nav class="fixed top-0 w-full z-50 glass border-b border-slate-800 hidden md:block">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#"
-        class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Fidelics</a>
+        class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">FIDELICS</a>
       <div class="flex space-x-8 text-sm font-medium">
         <a href="#home" class="hover:text-blue-400 transition text-blue-400">首页</a>
         <div class="relative group">
@@ -195,7 +141,7 @@
   <!-- Desktop Scroll Indicator -->
   <div x-data="{ active: 'home' }"
     class="fixed right-8 top-1/2 transform -translate-y-1/2 hidden lg:flex flex-col space-y-4 z-40">
-    <template x-for="section in ['home', 'products', 'developer', 'about']">
+    <template x-for="section in ['home', 'products', 'pro-scenes', 'developer', 'support', 'about']">
       <a :href="`#${section}`" @click="active = section"
         class="dot-indicator rounded-full bg-gray-600 transition-all duration-300"
         :class="active === section ? 'active' : ''"></a>
@@ -471,14 +417,17 @@
         </div>
 
         <!-- 场景 2 -->
-        <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
+        <a href="/scenes/aeroacoustics.php" class="block group">
+          <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
                   hover:border-purple-500 hover:bg-slate-800/50 transition">
-          <div class="w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
-          <div>
-            <h3 class="font-semibold text-purple-300 group-hover:text-purple-200">航空汽车声学预测</h3>
-            <p class="text-gray-400 mt-1">宽频噪声建模 · FW-H 声比拟 · 声源定位降噪</p>
+            <div class="w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
+            <div>
+              <h3 class="font-semibold text-purple-300 group-hover:text-purple-200">航空汽车声学预测</h3>
+              <p class="text-gray-400 mt-1">宽频噪声建模 · FW-H 声比拟 · 声源定位降噪</p>
+            </div>
           </div>
-        </div>
+        </a>
+
 
         <!-- 场景 3 -->
         <div class="group flex items-start space-x-3 p-4 rounded-lg bg-slate-800/30 backdrop-blur-sm border border-slate-700 
@@ -596,7 +545,7 @@
   <!-- Scroll Active Section Tracker -->
   <script>
     document.addEventListener('scroll', () => {
-      const sections = ['home', 'products', 'developer', 'about'];
+      const sections = ['home', 'products', 'pro-scenes', 'developer', 'support', 'about'];
       const scrollPos = window.scrollY + 100;
 
       sections.forEach(sec => {

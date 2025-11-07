@@ -1,0 +1,61 @@
+<!-- 共享 Header + 滚动变实色 + 顶部无边框 -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 
+                bg-slate-900/70 backdrop-blur-md 
+                transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center space-x-3 group">
+            <span class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 
+                   bg-clip-text text-transparent 
+                   group-hover:from-cyan-300 group-hover:to-blue-400 
+                   transition-all duration-300">
+                FIDELICS
+            </span>
+        </a>
+
+        <!-- 返回主页 -->
+        <a href="/index.html" class="px-5 py-2 border border-cyan-500/50 rounded-lg 
+                text-cyan-300 text-sm font-medium
+                hover:bg-cyan-500/10 hover:border-cyan-400 hover:text-cyan-200 
+                transition-all duration-300">
+            返回主页
+        </a>
+    </div>
+</header>
+
+<!-- 占位 -->
+<div class="h-20"></div>
+
+<!-- 滚动 JS：顶部无边框，滚动后加边框 + 阴影 -->
+<script>
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('site-header');
+        const scrollY = window.scrollY;
+
+        if (scrollY > 60) {
+            // 滚动后：加边框 + 实色 + 阴影
+            header.classList.remove(
+                'bg-slate-900/70', 'backdrop-blur-md'
+            );
+            header.classList.add(
+                'bg-slate-900/98', 'backdrop-blur-sm', 'shadow-xl',
+                'border-slate-700'
+            );
+        } else {
+            // 顶部：无边框 + 半透明
+            header.classList.remove(
+                'bg-slate-900/98', 'backdrop-blur-sm', 'shadow-xl',
+                'border-slate-700'
+            );
+            header.classList.add(
+                'bg-slate-900/70', 'backdrop-blur-md'
+            );
+        }
+    });
+
+    // 页面加载时立即检查
+    document.addEventListener('DOMContentLoaded', () => {
+        window.dispatchEvent(new Event('scroll'));
+    });
+</script>
