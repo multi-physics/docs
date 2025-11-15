@@ -108,13 +108,25 @@
     <section id="demo" class="py-16 px-6">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-12 gradient-text from-teal-400 to-cyan-500">技术演示</h2>
+
             <div class="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-                <video controls poster="/images/aeroacoustics-demo-thumb.jpg" class="w-full">
-                    <source src="/videos/aeroacoustics-demo.mp4" type="video/mp4">
-                    您的浏览器不支持视频播放。
+                <video controls poster="aeroacoustics/images/pressure_top_282.png" class="w-full">
+                <source src="aeroacoustics/videos/basic_acoutsics.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
                 </video>
             </div>
-            <p class="text-gray-400 mt-6">* 真实案例：某型发动机喷流噪声预测</p>
+            <p class="text-gray-400 mt-6">多波源激励声波传播</p>
+            
+            <div class="aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+                <video controls poster="aeroacoustics/images/pressure_top_1386.png" class="w-full">
+                <source src="aeroacoustics/videos/fidelics_acoustics.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <p class="text-gray-400 mt-6">汽车后视镜噪声分析</p>
+
+        
+
         </div>
     </section>
 
