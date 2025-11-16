@@ -1,0 +1,93 @@
+<!-- === 联系方式弹窗组件 - 可复用 === -->
+<div id="contactWidget" class="contact-widget fixed bottom-6 right-6 z-50">
+  <!-- 触发按钮 -->
+  <button onclick="toggleContact()"
+    class="bg-wechat text-white p-4 rounded-full shadow-xl hover:scale-110 transition-all duration-300">
+    <i class="fas icon-comment-dots text-xl"></i>
+  </button>
+
+  <!-- 弹窗面板 -->
+  <div id="contactPanel"
+    class="absolute bottom-16 right-0 w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden transform scale-0 transition-transform duration-300 origin-bottom-right">
+    <div class="p-5">
+      <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-3">联系我</h3>
+
+      <!-- 联系方式列表 -->
+      <div class="space-y-3">
+        <a href="tel:+(86)18801065829"
+          class="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-blue-600">
+          <i class="fas icon-phone w-5"></i>
+          <span>+(86)18801065829</span>
+        </a>
+        <a href="mailto:contact@mail.fidelics.cn"
+          class="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-red-600">
+          <i class="fas icon-envelope w-5"></i>
+          <span>contact@mail.fidelics.cn</span>
+        </a>
+        <button onclick="openWeChat()"
+          class="flex items-center space-x-3 text-gray-700 dark:text-gray-300 hover:text-wechat w-full text-left">
+          <i class="fab icon-weixin w-5"></i>
+          <span>微信：@Fidelics</span>
+        </button>
+      </div>
+
+      <div class="mt-4 pt-4 border-t dark:border-gray-700 text-center text-xs text-gray-500">
+        © 2025 Fidelics Technology
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 微信二维码大弹窗 -->
+<div id="wechatModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-[60] hidden"
+  onclick="closeModal()">
+  <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-xs w-full mx-4 shadow-2xl"
+    onclick="event.stopPropagation()">
+    <img src="https://fidelics.cn/images/contact/wechat_qr.jpg" alt="微信二维码"
+      class="w-48 h-48 mx-auto rounded-xl border-4 border-wechat/20">
+    <p class="text-center mt-4 text-sm text-gray-600 dark:text-gray-400">微信扫码添加</p>
+    <p class="text-center font-medium">@Fidelics</p>
+    <button onclick="closeModal()"
+      class="mt-5 w-full py-2 bg-wechat text-white rounded-xl hover:bg-wechat/90">关闭</button>
+  </div>
+</div>
+
+<!-- Tailwind + Font Awesome CDN -->
+<link href="css/tailwind.css" rel="stylesheet">
+<link href="css/my_fa.css" rel="stylesheet">
+<script>
+  function toggleContact() {
+    const panel = document.getElementById('contactPanel');
+    panel.classList.toggle('scale-0');
+    panel.classList.toggle('scale-100');
+  }
+
+  function openWeChat() {
+    document.getElementById('wechatModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    toggleContact(); // 自动收起小面板
+  }
+
+  function closeModal() {
+    document.getElementById('wechatModal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+
+  // ESC 关闭
+  document.addEventListener('keydown', e => e.key === 'Escape' && closeModal());
+</script>
+
+<style>
+  .contact-widget button {
+    box-shadow: 0 10px 20px rgba(7, 193, 96, 0.3);
+  }
+
+  #contactPanel.scale-100 {
+    transform: scale(1);
+  }
+
+  #contactPanel.scale-0 {
+    transform: scale(0);
+  }
+</style>
+<!-- === 组件结束 === -->

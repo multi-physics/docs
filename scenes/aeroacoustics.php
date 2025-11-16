@@ -10,7 +10,7 @@
 
       <!-- 社交分享缩略图 -->
     <meta property="og:title" content="航空汽车声学仿真 | Fidelics">
-    <meta property="og:description" content="高精度声场分析，宽频噪声预测，声源定位，降噪优化">
+    <meta property="og:description" content="下一代低噪声设计: 高精度声场分析，宽频噪声预测，声源定位，降噪优化">
     <meta property="og:image" content="https://fidelics.cn/images/logos/favicon.jpg">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
@@ -21,8 +21,7 @@
     <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
   <script src="https://fidelics.cn/js/wechatShare.js"></script>
   <script>
-
-    initWx('航空汽车声学仿真 | Fidelics', '高精度声场分析，宽频噪声预测，声源定位，降噪优化','https://fidelics.cn/images/logos/111.png');
+    initWx('航空汽车声学仿真 | Fidelics', '下一代低噪声设计: 高精度声场分析，宽频噪声预测，声源定位，降噪优化','https://fidelics.cn/images/logos/111.png');
   </script>
 
 
@@ -46,7 +45,7 @@
     <section class="pt-32 pb-20 px-6 relative overflow-hidden">
         <div class="max-w-6xl mx-auto text-center">
             <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                <span class="gradient-text from-cyan-400 to-blue-500">航空汽车声学仿真</span>
+                <span class="gradient-text from-cyan-400 to-blue-500">下一代低噪声设计</span>
             </h1>
             <p class="text-xl text-gray-300 mb-8">宽频噪声预测 · 声源定位 · 降噪优化</p>
             <div class="flex justify-center space-x-4">
@@ -65,15 +64,15 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="glass p-6 rounded-xl text-center">
                     <h3 class="text-xl font-bold text-cyan-300 mb-2">宽频噪声建模</h3>
-                    <p class="text-gray-400 text-sm">支持 1Hz–20kHz 全频段，捕捉湍流、喷流、结构振动噪声</p>
+                    <p class="text-gray-400 text-sm">支持 100Hz–20kHz 全频段，捕捉湍流、喷流、结构振动噪声</p>
                 </div>
                 <div class="glass p-6 rounded-xl text-center">
                     <h3 class="text-xl font-bold text-purple-300 mb-2">FW-H 声比拟</h3>
-                    <p class="text-gray-400 text-sm">高精度远场声传播，兼容动网格与旋转声源</p>
+                    <p class="text-gray-400 text-sm">多模型高精度远场声传播，内置AWE、PCWE等多种声学模型</p>
                 </div>
                 <div class="glass p-6 rounded-xl text-center">
                     <h3 class="text-xl font-bold text-emerald-300 mb-2">声源定位与降噪</h3>
-                    <p class="text-gray-400 text-sm">波束成形 + AI 优化，定位噪声源并提出结构/气动改进</p>
+                    <p class="text-gray-400 text-sm">波束成形，声功率贡献分解, 定位噪声源并提出结构/气动改进</p>
                 </div>
             </div>
         </div>
@@ -85,20 +84,23 @@
             <h2 class="text-3xl font-bold text-center mb-12 gradient-text from-orange-400 to-red-500">典型应用场景</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="glass p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold text-orange-300 mb-2">低空旋翼飞行器低噪音优化</h3>
+                    <p class="text-gray-400 text-sm">电动垂直起降（eVTOL）螺旋桨宽频啸叫成为社区噪声瓶颈，软件支持实时宽频A计权声压级预测，助力城市空中交通（UAM）声学认证。</p>
+                </div>
+
+                 <div class="glass p-6 rounded-xl">
                     <h3 class="text-lg font-semibold text-orange-300 mb-2">航空发动机喷流噪声</h3>
                     <p class="text-gray-400 text-sm">超声速喷流 + FW-H 远场传播，预测机场噪声符合 ICAO 标准</p>
                 </div>
+
                 <div class="glass p-6 rounded-xl">
                     <h3 class="text-lg font-semibold text-orange-300 mb-2">汽车通过噪声</h3>
                     <p class="text-gray-400 text-sm">外流场 + 轮胎/侧镜噪声，优化 A 柱与后视镜造型</p>
                 </div>
-                <div class="glass p-6 rounded-xl">
-                    <h3 class="text-lg font-semibold text-orange-300 mb-2">无人机螺旋桨啸叫</h3>
-                    <p class="text-gray-400 text-sm">旋转动网格 + 宽频建模，降噪 6dB</p>
-                </div>
+
                 <div class="glass p-6 rounded-xl">
                     <h3 class="text-lg font-semibold text-orange-300 mb-2">风电叶片气动噪声</h3>
-                    <p class="text-gray-400 text-sm">尾缘噪声 + 锯齿优化，降低 3–5dB</p>
+                    <p class="text-gray-400 text-sm">尾缘噪声 + 锯齿优化，结构振动噪声耦合，助力轻量化复合材料机身NVH</p>
                 </div>
             </div>
         </div>
@@ -123,16 +125,13 @@
                 您的浏览器不支持视频播放。
                 </video>
             </div>
-            <p class="text-gray-400 mt-6">汽车后视镜噪声分析</p>
-
-        
-
+            <p class="text-gray-400 mt-6">汽车后视镜噪声分析</p>       
         </div>
     </section>
 
     <!-- 联系我们 -->
     <section id="contact" class="py-16 px-6 bg-slate-900/50">
-        <div class="max-w-4xl mx-auto text-center">
+        <!-- <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-8 gradient-text from-indigo-400 to-purple-500">获取专属声学方案</h2>
             <form class="space-y-4 max-w-md mx-auto">
                 <input type="text" placeholder="您的姓名"
@@ -146,8 +145,9 @@
                     提交需求
                 </button>
             </form>
-        </div>
+        </div> -->
     </section>  
+   <?php include '../contact-widget.html'; ?>
 </body>
 
 </html>

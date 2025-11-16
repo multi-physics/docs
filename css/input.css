@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* 微信颜色自定义 */
+@layer utilities {
+  .bg-wechat {
+    @apply bg-[#07c160];
+  }
+
+  .text-wechat {
+    @apply text-[#07c160];
+  }
+
+  .border-wechat {
+    @apply border-[#07c160];
+  }
+}
