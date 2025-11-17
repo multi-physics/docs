@@ -81,27 +81,27 @@ export default defineConfig({
             },
             { text: '基础方程', link: '/theroy/fluidEqs' },
             { text: '湍流模型', link: '/theroy/turbulence' },
+            { text: '运动模型', link: '/theroy/movingframe' },
+            { text: '边界条件', link: '/theroy/boundary' },
             { text: '多组分流', link: '/theroy/species' },
             {
-              text: '多相流',
+              text: '声学',
               items: [
-                { text: 'VOF', link: '/theroy' },
-                { text: '欧拉-欧拉', link: '/theroy' },
+                { text: '广谱噪音', link: '/theroy/acoustics_广谱噪音' },
+                { text: '线性声学', link: '/theroy/acoustics_线性声学' },
+                { text: '直接模拟', link: '/theroy/acoustics_直接模拟' },
               ]
             },
-            { text: '多孔介质', link: '/theroy' },
             {
               text: '多相流',
               items: [
-                { text: '广谱噪音', link: '/theroy' },
-                { text: '线性声学', link: '/theroy' },
-                { text: '直接模拟', link: '/theroy' },
+                { text: 'VOF', link: '/theroy/VOF' },
+                { text: '欧拉-欧拉', link: '/theroy/euler-euler' },
               ]
             },
-            { text: '热辐射', link: '/theroy' },
-            { text: '化学反应', link: '/theroy' },
-            { text: '运动', link: '/theroy' },
-            { text: '边界', link: '/theroy' }
+            { text: '多孔介质', link: '/theroy/多孔介质' },
+            { text: '热辐射', link: '/theroy/热辐射' },
+            { text: '化学反应', link: '/theroy/reactions' }
           ]
         }
       ]
