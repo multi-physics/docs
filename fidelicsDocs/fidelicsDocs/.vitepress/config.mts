@@ -51,7 +51,7 @@ export default defineConfig({
       { text: '案例中心', link: '/tutorials' },
     ],
     lastUpdated: {
-      text: 'Updated at',
+      text: '更新于',
       formatOptions: {
         dateStyle: 'full',
         timeStyle: 'medium'
@@ -75,13 +75,13 @@ export default defineConfig({
             {
               text: '计算框架',
               items: [
-                { text: '欧拉框架', link: '/theroy' },
-                { text: '拉格朗日框架', link: '/theroy' }
+                { text: '欧拉框架', link: '/theroy/eulerFramework' },
+                { text: '拉格朗日框架', link: '/theroy/lagrangFramework' }
               ]
             },
-            { text: '基础方程', link: '/theroy' },
-            { text: '湍流模型', link: '/theroy' },
-            { text: '多组分流', link: '/theroy' },
+            { text: '基础方程', link: '/theroy/fluidEqs' },
+            { text: '湍流模型', link: '/theroy/turbulence' },
+            { text: '多组分流', link: '/theroy/species' },
             {
               text: '多相流',
               items: [
