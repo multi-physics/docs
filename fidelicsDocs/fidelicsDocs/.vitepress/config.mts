@@ -81,7 +81,7 @@ export default defineConfig({
             },
             { text: '基础方程', link: '/theroy/fluidEqs' },
             { text: '湍流模型', link: '/theroy/turbulence' },
-            { text: '运动模型', link: '/theroy/movingframe' },
+            { text: '运动模型', link: '/theroy/movingFrame' },
             { text: '边界条件', link: '/theroy/boundary' },
             { text: '多组分流', link: '/theroy/species' },
             {
