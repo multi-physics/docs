@@ -1,0 +1,5 @@
+npm run docs:build
+
+# 安装mathjax3 支持
+npm install markdown-it-mathjax3 mathjax3
+
