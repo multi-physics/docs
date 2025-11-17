@@ -23,7 +23,7 @@ export default defineConfig({
       'meta',
       {
         property: 'og:description',
-        content: 'Fidelics多物理场仿真平台，赋能高端装备与新质生产力。'
+        content: '获取最新文档、教程、视频等快速入门Fidelics软件'
       }
     ],
     [
@@ -32,7 +32,24 @@ export default defineConfig({
         property: 'og:image',
         content: 'https://fidelics.cn/images/logos/64x64.ico'
       }
-    ]
+    ],
+    [
+      'script',
+      {
+        src: 'https://res.wx.qq.com/open/js/jweixin-1.6.0.js'
+      }
+    ],
+    [
+      'script',
+      {
+        src: 'https://fidelics.cn/js/wechatShare.js'
+      }
+    ],
+    [
+      'script',
+      {},
+      'initWx("Fidelics用户中心", "获取最新文档、教程、视频等快速入门Fidelics软件", "https://fidelics.cn/images/logos/64x64.ico");'
+    ],
   ],
   description: "Documentation, tutorials, and videos for Fidelics Products",//Documentation, tutorials, and videos for Fidelics Products
   lastUpdated: true,
