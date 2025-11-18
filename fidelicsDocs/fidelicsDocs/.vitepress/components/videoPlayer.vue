@@ -14,6 +14,7 @@ const props = defineProps({
   preload: { type: String, default: 'auto' }  // 'none', 'metadata', or 'auto'
 })
 
+
 const videoRef = ref(null)
 
 // 全局互斥播放核心逻辑
@@ -34,7 +35,9 @@ onMounted(() => {
 
   // 额外：点击视频区域直接播放（防浏览器政策）
   video.addEventListener('click', () => {
-    video.play().catch(() => {})  // 忽略 autoplay 错误
+    if(!v.paused){
+       video.play().catch(() => {})  // 忽略 autoplay 错误
+    }   
   })
 
   onUnmounted(() => {
