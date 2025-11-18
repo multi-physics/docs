@@ -13,6 +13,9 @@ hero:
       text: 下载最新版
       link: /download
     - theme: alt
+      text: 精选案例
+      link: /coolCases
+    - theme: alt
       text: 新手入门
       link: /examples
 

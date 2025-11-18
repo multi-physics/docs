@@ -118,11 +118,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
+      { text: '精选案例', link: '/coolCases' },
       { text: '部署指南', link: '/install' },
       { text: '产品功能', link: '/features' },
       { text: '技术理论', link: '/theroy/eulerFramework' },
       { text: '开发者功能', link: '/sdks' },
       { text: '案例中心', link: '/tutorials' },
+      { text: '成长历史', link: '/growup' },
     ],
     lastUpdated: {
       text: '更新于',

@@ -8,4 +8,5 @@ npm run docs:preview
 npm install markdown-it-mathjax3 mathjax3
 
 # 最后将.vitepress/dist 中的文件上传到网站即可
+! images需要拷贝一份进去
 
