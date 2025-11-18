@@ -109,10 +109,10 @@ onMounted(() => {
   transition: all 0.3s;
 }
 
-.vp-video-player:hover {
+/* .vp-video-player:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
+} */
 
 .vp-tags-container {
   position: absolute;  /* 容器整体定位到右上角 */
