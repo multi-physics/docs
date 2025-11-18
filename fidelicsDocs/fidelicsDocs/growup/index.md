@@ -4,17 +4,7 @@
 ## 2024-2025
 
 ## 2022-2024
-  <video 
-  src="/videos/fidelics_2024.mp4" 
-  controls 
-  preload="metadata"
-  width="100%"
-  autoplay 
-  loop 
-  muted 
-  playsinline>
-  您的浏览器不支持视频播放。
-</video>
+<videoPlayer   src="/videos/fidelics_2024.mp4"/>
 
 ## long long ago
 Fidelics 诞生了，现在没有时间整理，等以后考古吧。
