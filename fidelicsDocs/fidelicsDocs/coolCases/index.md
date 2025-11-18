@@ -10,6 +10,9 @@
 ## 叶轮流体FSI
 <videoPlayer   src="/videos/fiedlis_rotor.mp4"     poster="/videos/fiedlis_rotor.jpg" tag="旋转系,动网格,交界面,非稳态"/>
 
+## 汽车后视镜声学(密度基)
+<videoPlayer   src="/videos/fidelics_acoustics.mp4"     poster="/videos/fidelics_acoustics.png" tag="非稳态,密度基,声学"/>
+
 ## 心脏血流动力学
 <videoPlayer  src="/videos/heartFlow.mp4" poster="/videos/heartFlow.jpg"  tag="动网格,网格变形,非稳态"/>
 
