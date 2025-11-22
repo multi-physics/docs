@@ -105,7 +105,7 @@ export default defineConfig({
     [
       'script',
       {},
-      'initWx("Fidelics用户中心", "获取最新文档、教程、视频等快速入门Fidelics软件", "https://fidelics.cn/images/logos/64x64.ico");'
+      'const pageTitle = document.title;initWx(pageTitle, "获取最新文档、教程、视频等快速入门Fidelics软件", "https://fidelics.cn/images/logos/64x64.ico");'
     ],
   ],
   description: "Documentation, tutorials, and videos for Fidelics Products",//Documentation, tutorials, and videos for Fidelics Products
@@ -123,7 +123,7 @@ export default defineConfig({
       { text: '产品功能', link: '/features' },
       { text: '技术理论', link: '/theroy/eulerFramework' },
       { text: '开发者功能', link: '/sdks' },
-      { text: '案例中心', link: '/tutorials' },
+      { text: '案例中心', link: '/examples' },
       { text: '成长历史', link: '/growup' },
     ],
     lastUpdated: {
@@ -178,6 +178,45 @@ export default defineConfig({
             { text: '多孔介质', link: '/theroy/多孔介质' },
             { text: '热辐射', link: '/theroy/热辐射' },
             { text: '化学反应', link: '/theroy/reactions' }
+          ]
+        }
+      ],
+      '/examples/VVExamples': [
+        {
+          text: 'V&V 验证',
+          items: [
+            {
+              text: '基准案例',
+              items: [
+                {
+                  text: '边界层', link: '/examples/VVExamples/boundaryLayer'
+                },
+                {
+                  text: '管流', link: '/examples/VVExamples/pipeFlow'
+                },
+                { text: '分离流', link: '/examples/VVExamples/cylinderFlow' },
+                { text: '非稳态流', link: '/examples/VVExamples/unsteadyCylinderFlow' }
+              ]
+            },
+            {
+              text: '场景案例',
+              items: [
+                { text: '翼型外流场', link: '/examples/VVExamples/NACA0012' },
+                { text: '汽车外流场', link: '/examples/VVExamples/carExternalFlow' },
+                { text: '跨音速叶珊', link: '/examples/VVExamples/casecade1055' },
+                { text: '核燃料组件', link: '/examples/VVExamples/nuclearRod' },
+              ]
+            },
+            {
+              text: '多物理场耦合案例',
+              items: [
+                { text: '圆柱强迫振荡', link: '/examples/VVExamples/cylinderFSI' },
+                { text: '欧拉-圆柱自激振荡', link: '/examples/VVExamples/cylinderFSI' },
+                { text: '圆柱-梁自激振荡', link: '/examples/VVExamples/cylinderFSI' },
+                { text: '共轭传热', link: '/examples/VVExamples/CHTFlow' },
+                { text: '汽车后视镜声学', link: '/examples/VVExamples/mirrorAeroacoustics' }
+              ]
+            }
           ]
         }
       ]

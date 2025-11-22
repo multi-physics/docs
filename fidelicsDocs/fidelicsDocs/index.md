@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
+title: 用户中心
 hero:
   name: "Fidelics"
   text: "用户中心"
@@ -17,7 +17,7 @@ hero:
       link: /coolCases
     - theme: alt
       text: 新手入门
-      link: /examples
+      link: /tutorials
 
 features:
   - title: 灵活部署到研发环境
