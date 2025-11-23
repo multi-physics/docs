@@ -184,6 +184,7 @@ export default defineConfig({
       '/examples/VVExamples': [
         {
           text: 'V&V 验证',
+          link: '/examples/VVExamples',
           items: [
             {
               text: '基准案例',
