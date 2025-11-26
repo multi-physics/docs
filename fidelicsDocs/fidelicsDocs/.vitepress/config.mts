@@ -118,13 +118,13 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '精选案例', link: '/coolCases' },
-      { text: '部署指南', link: '/install' },
-      { text: '产品功能', link: '/features' },
-      { text: '技术理论', link: '/theroy/eulerFramework' },
-      { text: '开发者功能', link: '/sdks' },
-      { text: '案例中心', link: '/examples' },
-      { text: '成长历史', link: '/growup' },
+      { text: '精选案例', link: '/coolCases/' },
+      { text: '部署指南', link: '/install/' },
+      { text: '产品功能', link: '/features/' },
+      { text: '技术理论', link: '/theroy/' },
+      { text: '开发者功能', link: '/sdks/' },
+      { text: '案例中心', link: '/examples/' },
+      { text: '成长历史', link: '/growup/' },
     ],
     lastUpdated: {
       text: '更新于',
@@ -147,18 +147,46 @@ export default defineConfig({
       '/theroy/': [
         {
           text: '技术理论',
+          link: '/theroy/',
           items: [
             {
-              text: '计算框架',
+              text: '连续力学理论',
               items: [
                 { text: '欧拉框架', link: '/theroy/eulerFramework' },
-                { text: '拉格朗日框架', link: '/theroy/lagrangFramework' }
+                { text: '拉格朗日框架', link: '/theroy/lagrangFramework' },
+                { text: '欧拉-拉格朗日框架', link: '/theroy/movingFrame' },
               ]
             },
             { text: '基础方程', link: '/theroy/fluidEqs' },
-            { text: '湍流模型', link: '/theroy/turbulence' },
-            { text: '运动模型', link: '/theroy/movingFrame' },
+            {
+              text: '湍流模型', link: '/theroy/turbulence',
+              items: [
+                {
+                  text: '雷洛平均模型(RANS)', link: '/theroy/turbulence/RANS',
+                  items: [
+                    { text: 'Spalart-Allmaras模型', link: '/theroy/turbulence/RANS/SA' },
+                    { text: 'K-Epsilon模型', link: '/theroy/turbulence/RANS/ke' },
+                    { text: 'K-Omega模型', link: '/theroy/turbulence/RANS/komega' },
+                    { text: 'SST模型', link: '/theroy/turbulence/RANS/SST' },
+                    { text: '雷洛应力模型', link: '/theroy/turbulence/RANS/RSM' }
+                  ]
+                },
+                { text: '大涡模拟(LES)', link: '/theroy/turbulence/LES' },
+                { text: '直接数值模拟(DNS)', link: '/theroy/turbulence/DNS' }
+              ]
+
+
+            },
             { text: '边界条件', link: '/theroy/boundary' },
+            {
+              text: '运动模型', link: '/theroy/motion',
+              items: [
+                { text: '多参考系(MRF)', link: '/theroy/motion/MRF' },
+                { text: '动网格(Dym)', link: '/theroy/motion/dynamicMesh' },
+                { text: '嵌套网格(OverSet)', link: '/theroy/motion/overset' }
+              ]
+            },
+            { text: '非稳态', link: '/theroy/unsteady' },
             { text: '多组分流', link: '/theroy/species' },
             {
               text: '声学',
@@ -170,11 +198,23 @@ export default defineConfig({
             },
             {
               text: '多相流',
+              link: '/theroy/multiPhase/',
               items: [
-                { text: 'VOF', link: '/theroy/VOF' },
-                { text: '欧拉-欧拉', link: '/theroy/euler-euler' },
+                { text: 'VOF', link: '/theroy/multiPhase/VOF' },
+                { text: '欧拉-欧拉', link: '/theroy/multiPhase/euler-euler' },
+                {
+                  text: '相变',
+                  link: '/theroy/multiPhase/phaseChange/',
+                  items: [
+                    { text: '蒸发', link: '/theroy/multiPhase/phaseChange/evaporation' },
+                    { text: '冷凝', link: '/theroy/multiPhase/phaseChange/condensation' },
+                    { text: '融化', link: '/theroy/multiPhase/phaseChange/melting' },
+                    { text: '凝固', link: '/theroy/multiPhase/phaseChange/solidification' },
+                  ]
+                },
               ]
             },
+
             { text: '多孔介质', link: '/theroy/多孔介质' },
             { text: '热辐射', link: '/theroy/热辐射' },
             { text: '化学反应', link: '/theroy/reactions' }
@@ -184,7 +224,7 @@ export default defineConfig({
       '/examples/VVExamples': [
         {
           text: 'V&V 验证',
-          link: '/examples/VVExamples',
+          link: '/examples/VVExamples/',
           items: [
             {
               text: '基准案例',
@@ -248,6 +288,28 @@ export default defineConfig({
   markdown: {
     math: true,
     config: (md) => { md.use(mathjax3) }
+  },
+  vite: {
+    plugins: [
+      {// define rules to ingore building of internal files.
+        name: "ignore-internal-md",
+        enforce: 'pre',
+        load(id) {
+          if (process.env.NODE_ENV == "production") {
+            if (id.endsWith('.md')) {
+
+              const file = id.split('/').pop()
+              if (file?.startsWith('internal_')) {
+
+                return ['# ⛔ 权限不足',
+                  '该栏目属于内部信息，欲知详情，请用权限用户登录。'].join('\n');
+              }
+            }
+          }
+          return null;
+        }
+      }
+    ]
   }
 })
 
