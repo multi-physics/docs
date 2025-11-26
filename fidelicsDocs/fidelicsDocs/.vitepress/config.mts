@@ -177,9 +177,9 @@ export default defineConfig({
 
 
             },
-            { text: '边界条件', link: '/theroy/boundary' },
+            { text: '边界条件', link: '/theroy/boundary/' },
             {
-              text: '运动模型', link: '/theroy/motion',
+              text: '运动模型', link: '/theroy/motion/',
               items: [
                 { text: '多参考系(MRF)', link: '/theroy/motion/MRF' },
                 { text: '动网格(Dym)', link: '/theroy/motion/dynamicMesh' },

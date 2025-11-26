@@ -1,7 +1,7 @@
 ---
 outline: deep
 ---
-# 非稳态计算
+# 非稳态计算 <Badge type="info" text="default" />
 对于非稳态问题，一般可以写成如下动力学形式（这里的"动"和"力"是抽象意义的，凡是随着时间变化的都可以视为运动，凡是驱动这种变化的，都可以视为力）：
 $$
 \frac{d \phi}{d  t}  = RHS
@@ -25,7 +25,7 @@ $$ \frac{{d\phi }}{{dt}} = \sum\limits_i {{\beta _i}{\delta _i}{\phi ^{n - i}}} 
 ### 显式RK1(或者显式Euler)
 $${{{\phi ^n} - {\phi ^{n - 1}}} \over {\Delta t}} = RHS\left( {{\phi ^{n-1}}} \right)$$
 对应的系数组合为${{\beta}}=\{\beta _{0}=1.0，\beta _{1}=-1 \}$，${{\alpha}}=\{\alpha _{1}=1.0 \}$
-### 显示RKn
+### 显示RKn <Badge type="tip" text="^1.9.0" />
 待补充
 ### 显示SSP-RKn
 待补充
