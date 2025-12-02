@@ -47,3 +47,5 @@ $$ {\left( {{{{d}\phi } \over {d{t}}}} \right)_{t = {t_n}}}={{3{\phi ^n} - 4{\ph
 ### 隐式CrackNicolson
 离散形式如下，其为A-Stable类型
 $${{{\phi ^n} - {\phi ^{n - 1}}} \over {\Delta t}} = {1 \over 2}\left( {RHS\left( {{\phi ^n}} \right) + RHS\left( {{\phi ^{n - 1}}} \right)} \right)$$
+
+对应的系数组合为${{\beta}}=\{\beta _{0}=1.0，\beta _{1}=-1 \}$，${{\alpha}}=\{\alpha _0=0.5, \alpha _1=0.5  \}$

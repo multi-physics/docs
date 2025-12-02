@@ -124,7 +124,7 @@ export default defineConfig({
       { text: '技术理论', link: '/theroy/' },
       { text: '开发者功能', link: '/sdks/' },
       { text: '案例中心', link: '/examples/' },
-      { text: '成长历史', link: '/growup/' },
+      { text: '关于Fidelics', link: '/aboutus/' },
     ],
     lastUpdated: {
       text: '更新于',
@@ -144,6 +144,26 @@ export default defineConfig({
           ]
         }
       ],
+      '/aboutus/': [
+        {
+          text: '关于Fidelics',
+          link: '/aboutus/',
+          items: [
+            { text: '使命愿景', link: '/aboutus/vision' },
+            { text: '成长历史', link: '/aboutus/growup/' }
+          ]
+        }
+      ],
+      '/tutorials/': [
+        {
+          text: '入门教学', link: '/tutorials/',
+          items: [
+            { text: '快速入门', link: '/tutorials/quickstart' },
+            { text: '用户界面', link: '/tutorials/gui' },
+            { text: 'VSCode环境中使用', link: '/tutorials/vscode' }
+          ]
+        }
+      ],
       '/theroy/': [
         {
           text: '技术理论',
@@ -159,10 +179,10 @@ export default defineConfig({
             },
             { text: '基础方程', link: '/theroy/fluidEqs' },
             {
-              text: '湍流模型', link: '/theroy/turbulence',
+              text: '湍流模型', link: '/theroy/turbulence/',
               items: [
                 {
-                  text: '雷洛平均模型(RANS)', link: '/theroy/turbulence/RANS',
+                  text: '雷洛平均模型(RANS)', link: '/theroy/turbulence/RANS/',
                   items: [
                     { text: 'Spalart-Allmaras模型', link: '/theroy/turbulence/RANS/SA' },
                     { text: 'K-Epsilon模型', link: '/theroy/turbulence/RANS/ke' },
@@ -171,8 +191,17 @@ export default defineConfig({
                     { text: '雷洛应力模型', link: '/theroy/turbulence/RANS/RSM' }
                   ]
                 },
-                { text: '大涡模拟(LES)', link: '/theroy/turbulence/LES' },
-                { text: '直接数值模拟(DNS)', link: '/theroy/turbulence/DNS' }
+                {
+                  text: '大涡模拟(LES)', link: '/theroy/turbulence/LES/',
+                  items: [
+                    { text: 'Smagorinsky模型', link: '/theroy/turbulence/LES/Smagorinsky' },
+                    { text: '动态Smagorinsky模型', link: '/theroy/turbulence/LES/DynamicSmagorinsky' },
+                    { text: 'WALE模型', link: '/theroy/turbulence/LES/WALE' },
+                    { text: 'Vreman模型', link: '/theroy/turbulence/LES/Vreman' },
+                    { text: 'Sigma模型', link: '/theroy/turbulence/LES/Sigma' }
+                  ]
+                },
+                { text: '直接数值模拟(DNS)', link: '/theroy/turbulence/DNS/' }
               ]
 
 
@@ -186,8 +215,8 @@ export default defineConfig({
                 { text: '嵌套网格(OverSet)', link: '/theroy/motion/overset' }
               ]
             },
-            { text: '非稳态', link: '/theroy/unsteady' },
-            { text: '多组分流', link: '/theroy/species' },
+            { text: '非稳态', link: '/theroy/unsteady/' },
+            { text: '多组分流', link: '/theroy/species/' },
             {
               text: '声学',
               items: [
