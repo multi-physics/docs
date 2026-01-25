@@ -33,3 +33,12 @@ outline: deep
 
 ### 2. 声学阶段
 #### 声功率密度
+
+
+
+<center>
+<img decoding="async" src="/images/tech/examples/validations/mirror_acoustics.png"   width="80%"/>  
+
+**Figure 3. 声功率密度.**
+
+</center>

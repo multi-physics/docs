@@ -30,3 +30,7 @@
 
 ## 流致振动
 <videoPlayer   src="/videos/beamFSI.mp4"   poster="/videos/beamFSI.jpg" tag="动网格,流固耦合,非稳态"/>
+
+
+## 高压弹射
+<videoPlayer   src="/videos/gas_fire.mp4"   poster="/videos/gas_fire.png" tag="动网格,动拓扑,大变形,非稳态"/>
