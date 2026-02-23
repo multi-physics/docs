@@ -124,7 +124,7 @@ export default defineConfig({
       { text: '技术理论', link: '/theroy/' },
       { text: '开发者功能', link: '/sdks/' },
       { text: '案例中心', link: '/examples/' },
-      { text: '关于Fidelics', link: '/aboutus/' },
+      { text: '关于我们', link: '/aboutus/' },
     ],
     lastUpdated: {
       text: '更新于',
@@ -264,7 +264,7 @@ export default defineConfig({
                 {
                   text: '管流', link: '/examples/VVExamples/pipeFlow'
                 },
-                { text: '分离流', link: '/examples/VVExamples/cylinderFlow' },
+                { text: '分离流', link: '/examples/VVExamples/seperationFlows' },
                 { text: '非稳态流', link: '/examples/VVExamples/unsteadyCylinderFlow' }
               ]
             },
