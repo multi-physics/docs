@@ -1,8 +1,13 @@
 
 # 精选案例
 如下是一些精选案例，体现 Fidelics 丰富的建模计算能力，供用户快速直观了解Fidelics核心功能(不代表全部功能）。
-## 奥迪A4外流
+
+## 汽车空气动力学
 <videoPlayer  src="/videos/car_fvm.mp4" poster="/videos/car_fvm.jpg" tag="压力基,非稳态,外流"/>
+<videoPlayer  src="/videos/audicar3d_steady.mp4" poster="/videos/audicar3d_steady.jpg" tag="压力基,外流"/>
+
+## 客机空气动力学
+<videoPlayer   src="/videos/aeroplane.mp4"     poster="/videos/aeroplane.jpg"  tag="密度基,跨音速,激波"/>
 
 ## 火箭尾喷马赫环
 <videoPlayer   src="/videos/mach_diamond.mp4"     poster="/videos/mach_diamond.jpg"  tag="密度基,跨音速,非稳态,激波"/>
@@ -22,6 +27,9 @@
 ## 微米级厚度水润轴承多相流
  <videoPlayer   src="/videos/bearing3d_rhou.mp4"   poster="/videos/bearingoil.jpg" tag="多相流,非稳态, 跨尺度解析"/>
 
+## 高分辨率水杯多相流
+ <videoPlayer   src="/videos/coeffecup.mp4"   poster="/videos/coeffecup.jpg" tag="多相流,非稳态, 高分辨率"/>
+ <videoPlayer   src="/videos/coeff_iso1.mp4"   poster="/videos/coeff_iso1.jpg" tag="多相流,非稳态, 高分辨率"/>
 ## 高压液氧煤油燃烧
 <videoPlayer   src="/videos/Combustion_3D_Fire.mp4"     poster="/videos/Combustion_3D_Fire.jpg" tag="化学反应,变物性,多组分"/>
 

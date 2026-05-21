@@ -311,7 +311,7 @@ export default defineConfig({
 
     footer: {
       message: '高保真、富有洞察力、用户导向的现代多物理建模仿真平台',
-      copyright: '© 2021-2025 Fidelics Technology. All rights reserved.'
+      copyright: '© 2021-2026 Fidelics Technology. All rights reserved.'
     }
   },
   markdown: {
