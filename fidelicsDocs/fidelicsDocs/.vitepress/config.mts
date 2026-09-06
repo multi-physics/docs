@@ -211,7 +211,14 @@ export default defineConfig({
               text: '运动模型', link: '/theroy/motion/',
               items: [
                 { text: '多参考系(MRF)', link: '/theroy/motion/MRF' },
-                { text: '动网格(Dym)', link: '/theroy/motion/dynamicMesh' },
+                {
+                  text: '动网格(Dym)', link: '/theroy/motion/dynamicMesh',
+                  items: [
+                    { text: '滑移网格', link: '/theroy/turbulence/LES/Smagorinsky' },
+                    { text: 'Morphing网格', link: '/theroy/turbulence/LES/DynamicSmagorinsky' },
+                    { text: 'reMesh网格', link: '/theroy/turbulence/LES/WALE' }
+                  ]
+                },
                 { text: '嵌套网格(OverSet)', link: '/theroy/motion/overset' }
               ]
             },
@@ -243,7 +250,19 @@ export default defineConfig({
                 },
               ]
             },
-
+            {
+              text: '多物理耦合', link: '/theroy/coupling/',
+              items: [
+                { text: '共轭传热', link: '/theroy/coupling/Conjugate Heat Transfer' },
+                {
+                  text: '流固耦合', link: '/theroy/coupling/Fluid Solid Interaction',
+                  items: [
+                    { text: '边界模型', link: '/theroy/coupling/Fluid Solid Interaction/Boundary Shape Based Model' },
+                    { text: '外部模型', link: '/theroy/coupling/Fluid Solid Interaction/External Solid Model' }
+                  ]
+                },
+              ]
+            },
             { text: '多孔介质', link: '/theroy/多孔介质' },
             { text: '热辐射', link: '/theroy/热辐射' },
             { text: '化学反应', link: '/theroy/reactions' }
